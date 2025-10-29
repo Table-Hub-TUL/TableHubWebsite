@@ -1,198 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TableHub</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#" aria-label="TableHub home">
-        <img src="logo.png" alt="TableHub logo" class="logo-img">
-        <span class="sr-only">TableHub</span>
-      </a>
-      <nav class="nav">
-        <a href="#overview">O TableHub</a>
-        <a href="#how-it-works">Jak to działa</a>
-        <a href="#pilot">Pilotaż</a>
-        <a href="#media">Media</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TableHub - Znajdź wolny stolik w czasie rzeczywistym</title>
+    <meta name="description" content="TableHub to nowoczesna aplikacja pokazująca dostępność stolików w restauracjach w czasie rzeczywistym. Sprawdź wolne miejsca na interaktywnej mapie." />
+    <meta name="author" content="TableHub" />
+    <meta name="keywords" content="restauracja, rezerwacja, stoliki, TableHub, wolne miejsca" />
 
-  <main>
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <h1 class="reveal">Strona internetowa dedykowana aplikacji TableHub.</h1>
-          <p class="lead reveal">Chcesz dowiedzieć się więcej?</p>
-          <p class="lead reveal">Naciśnij przycisk poniżej, lub przewiń stronę w dół.</p>
-          <p><a class="btn" id="learnBtn" href="#overview">Dowiedz się więcej</a></p>
-        </div>
-        <div class="hero-visual">
-          <a href="#media" aria-label="Widok mapy - media"><img src="assets/map_view.jpg" alt="Widok mapy" class="floating-img s1"></a>
-          <a href="#media" aria-label="Lista restauracji - media"><img src="assets/cms_list.png" alt="Lista restauracji" class="floating-img s1"></a>
-        </div>
-      </div>
-    </section>
+    <meta property="og:title" content="TableHub - Znajdź wolny stolik w czasie rzeczywistym" />
+    <meta property="og:description" content="Sprawdź dostępność stolików w restauracjach w Twojej okolicy. Interaktywna mapa z aktualnymi informacjami." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <section id="overview" class="container section reveal">
-      <h2>Czym jest TableHub</h2>
-      <p>TableHub to nowoczesna aplikacja, która w czasie rzeczywistym pokazuje użytkownikom, gdzie w okolicy znajdują się wolne stoliki – oraz ile miejsc oferuje każdy z nich. Na interaktywnej mapie użytkownicy mogą:</p>
-      <ul>
-        <li>Sprawdzić dostępność stolików w pobliskich restauracjach,</li>
-        <li>Zobaczyć liczbę miejsc przy każdym stoliku,</li>
-        <li>Obejrzeć podstawowe informacje o restauracji – rodzaj kuchni, adres, link do strony, a w przyszłości również menu.</li>
-      </ul>
-      <p>TableHub to narzędzie, które w prosty i przejrzysty sposób łączy restauracje z gośćmi, pomagając obu stronom lepiej zarządzać czasem i dostępnością miejsc.</p>
-    </section>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TableHub - Znajdź wolny stolik" />
+    <meta name="twitter:description" content="Nowoczesna aplikacja pokazująca dostępność stolików w czasie rzeczywistym" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-    <section id="how-it-works" class="container section">
-      <h2>Jak to działa</h2>
-      <h3>Dla użytkowników</h3>
-      <ul>
-        <li>Otwierają aplikację i widzą mapę z restauracjami w okolicy.</li>
-        <li>W kilka sekund sprawdzają, gdzie są wolne stoliki.</li>
-        <li>Mogą w prosty sposób oznaczać, które stoliki są wolne, a które zajęte – bezpośrednio na widoku sali.</li>
-        <li>Za aktywność w aplikacji zdobywają punkty i nagrody w ramach systemu gamifikacji.</li>
-      </ul>
-
-      <h3>Dla restauracji</h3>
-      <ul>
-        <li>Twoja restauracja zyskuje widoczność – pojawia się na mapie TableHub i przyciąga osoby szukające miejsca w pobliżu.</li>
-        <li>Dzięki crowdsourcingowi danych użytkownicy pomagają Ci utrzymywać aktualne informacje o dostępności stolików.</li>
-        <li>Zarządzasz swoim profilem i planem sali w intuicyjnym panelu restauratora (CMS).</li>
-        <li>Widzisz dane o obłożeniu stolików i ruchu gości w czasie rzeczywistym.</li>
-      </ul>
-    </section>
-
-    <section id="gamification" class="container section reveal">
-      <h2>Gamifikacja, która angażuje klientów</h2>
-      <p>TableHub wykorzystuje elementy grywalizacji, by zamienić codzienną czynność, szukanie stolika, w coś przyjemnego i interaktywnego.</p>
-      <h3>Jak to działa:</h3>
-      <ul>
-        <li>Użytkownicy oznaczają w aplikacji stoliki jako wolne lub zajęte.</li>
-        <li>Za każde zgłoszenie otrzymują punkty.</li>
-        <li>Punkty można wymieniać na nagrody, zniżki, vouchery lub specjalne oferty w restauracjach.</li>
-      </ul>
-      <h3>Co to oznacza dla restauracji:</h3>
-      <ul>
-        <li>Restauracje zyskują dostęp do aktualnych danych o obłożeniu,</li>
-        <li>Zyskują lojalnych i zaangażowanych klientów,</li>
-        <li>Goście chętniej wracają, by zdobywać kolejne nagrody,</li>
-        <li>Restauracja wyróżnia się jako nowoczesna i interaktywna,</li>
-        <li>A całe doświadczenie staje się zabawą, a nie tylko wyszukiwaniem miejsca.</li>
-      </ul>
-    </section>
-
-    <section id="cms" class="container section">
-      <h2>Panel restauratora (CMS)</h2>
-      <p>Panel TableHub to proste w obsłudze narzędzie, które daje Ci pełną kontrolę nad obecnością Twojej restauracji w aplikacji:</p>
-      <ul>
-        <li>Możesz edytować układ stolików i widok sali,</li>
-        <li>Promować swoje menu oraz swoją restaurację w aplikacji,</li>
-        <li>(Wkrótce) analizować ruch gości, godziny szczytu i popularność stolików.</li>
-      </ul>
-      <p>Zapraszamy do obejrzenia aktualnych widoków cms:</p>
-      <div class="gallery">
-        <figure class="media-item">
-          <a href="assets/cms_list.png" target="_blank" rel="noopener"><img src="assets/cms_list.png" alt="Okienko cms"></a>
-          <figcaption>Okienko cms</figcaption>
-        </figure>
-        <figure class="media-item">
-          <a href="assets/cms_restaurant.png" target="_blank" rel="noopener"><img src="assets/cms_restaurant.png" alt="Plan restauracji w cms"></a>
-          <figcaption>Plan restauracji w cms</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section id="benefits" class="container section reveal">
-      <h2>Dlaczego warto dołączyć</h2>
-      <ul>
-        <li>Więcej gości – użytkownicy TableHub wybierają miejsca, gdzie łatwo znaleźć wolny stolik.</li>
-        <li>Lepsza widoczność – Twoja restauracja pojawia się w aplikacji wśród top lokali w okolicy.</li>
-        <li>Zaangażowana społeczność – klienci sami pomagają aktualizować dane o dostępności.</li>
-        <li>Gamifikacja = lojalność – system nagród przyciąga klientów z powrotem.</li>
-        <li>Prosta obsługa – intuicyjny panel pozwala w kilka chwil zarządzać profilem restauracji i stolikami.</li>
-      </ul>
-    </section>
-
-    <section id="pilot" class="container section reveal">
-      <h2>Dołącz do pilotażu TableHub</h2>
-      <p>Obecnie zapraszamy wybrane restauracje do programu pilotażowego. To wyjątkowa okazja, aby:</p>
-      <ul>
-        <li>znaleźć się w aplikacji przed jej oficjalnym uruchomieniem,</li>
-        <li>pomóc współtworzyć system,</li>
-        <li>jako pierwsi przyciągnąć nowych gości i zebrać opinie użytkowników.</li>
-      </ul>
-      <p>Jeśli chcesz dołączyć do pilotażu lub otrzymać więcej informacji, skontaktuj się z nami przez e-mail lub przez formularz kontaktowy.</p>
-    </section>
-
-    <section id="media" class="container section reveal">
-      <h2>Media</h2>
-      <p>Galeria zrzutów ekranu aplikacji. Kliknij obrazek, aby otworzyć w pełnym rozmiarze.</p>
-      <div class="gallery">
-        <figure class="media-item">
-          <a href="assets/map_view.jpg" target="_blank" rel="noopener"><img src="assets/map_view.jpg" alt="Widok mapy TableHub"></a>
-          <figcaption>Widok mapy</figcaption>
-        </figure>
-        <figure class="media-item">
-          <a href="assets/restaurant_list.jpg" target="_blank" rel="noopener"><img src="assets/restaurant_list.jpg" alt="Lista restauracji"></a>
-          <figcaption>Lista restauracji</figcaption>
-        </figure>
-        <figure class="media-item">
-          <a href="assets/restaurant_popup.jpg" target="_blank" rel="noopener"><img src="assets/restaurant_popup.jpg" alt="Okienko restauracji"></a>
-          <figcaption>Popup restauracji</figcaption>
-        </figure>
-        <figure class="media-item">
-          <a href="assets/restaurant_filter.jpg" target="_blank" rel="noopener"><img src="assets/restaurant_filter.jpg" alt="Filtry restauracji"></a>
-          <figcaption>Filtry restauracji</figcaption>
-        </figure>
-      </div>
-      <div class="gallery">
-        <figure class="media-item">
-          <a href="assets/cms_list.png" target="_blank" rel="noopener"><img src="assets/cms_list.png" alt="Okienko cms"></a>
-          <figcaption>Okienko cms</figcaption>
-        </figure>
-        <figure class="media-item">
-          <a href="assets/cms_restaurant.png" target="_blank" rel="noopener"><img src="assets/cms_restaurant.png" alt="Plan restauracji w cms"></a>
-          <figcaption>Plan restauracji w cms</figcaption>
-        </figure>
-      </div>
-    </section>
-    
-    <section id="kontakt" class="container section reveal">
-      <h2>Kontakt</h2>
-      <p>Masz pytania lub chcesz dołączyć do pilotażu? Skontaktuj się z nami:</p>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <h3>Email</h3>
-          <a class="contact-link" href="mailto:tablehub@gmail.com">tablehub@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <h3>Telefon</h3>
-          <a class="contact-link" href="tel:+48123456789">+48 123 456 789</a>
-        </div>
-        <div class="contact-item">
-          <h3>Siedziba</h3>
-          <address>
-            ul. Przykładowa 12<br>
-            00-000 Miasto
-          </address>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> TableHub</p>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
