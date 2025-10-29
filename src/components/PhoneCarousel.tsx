@@ -12,25 +12,25 @@ const slides = [
     id: 1,
     image: appMap,
     title: "Mapa z restauracjami",
-    description: "Zobacz wszystkie restauracje w okolicy na interaktywnej mapie Mapbox. Liczby pokazują dostępność wolnych miejsc."
+    description: "Zobacz wszystkie restauracje w okolicy na interaktywnej mapie Mapbox. Liczby pokazują dostępność wolnych stolików."
   },
   {
     id: 2,
     image: appFilter,
     title: "Zaawansowane filtry",
-    description: "Filtruj restauracje według ratingu, rodzaju kuchni i minimalnej liczby wolnych miejsc przy stoliku."
+    description: "Filtruj restauracje według ocen, rodzaju kuchni i minimalnej liczby wolnych miejsc przy stoliku, aby każdy mógł znaleźć restaurację dla siebie."
   },
   {
     id: 3,
     image: appList,
     title: "Lista restauracji",
-    description: "Przeglądaj listę restauracji z odległością, adresem i rodzajem kuchni. Szybkie wyszukiwanie po nazwie."
+    description: "Przeglądaj listę restauracji według odległości, z adresem i rodzajem kuchni. Umożliwione również jest szybkie wyszukiwanie po nazwie."
   },
   {
     id: 4,
     image: appPopup,
     title: "Szczegóły restauracji",
-    description: "Kliknij pin na mapie, aby zobaczyć szczegóły: adres, oceny, dostępne stoliki i możliwość zgłoszenia zmian."
+    description: "Kliknij pin na mapie, aby zobaczyć szczegóły: adres, oceny, dostępne stoliki i możliwość zgłoszenia zmian, a w przyszłości nawet menu czy zdjęcia lokalu."
   }
 ];
 

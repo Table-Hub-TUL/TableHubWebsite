@@ -26,39 +26,39 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-card/95 backdrop-blur-lg shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-foreground/95 backdrop-blur-lg shadow-lg" : "bg-foreground"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <img src={logo} alt="TableHub Logo" className="w-12 h-12" />
-            <span className="text-xl font-bold text-foreground">TableHub</span>
+            <span className="text-xl font-bold text-background">TableHub</span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("overview")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-background hover:text-primary transition-colors"
             >
               O TableHub
             </button>
             <button
               onClick={() => scrollToSection("how-it-works")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-background hover:text-primary transition-colors"
             >
               Jak to działa
             </button>
             <button
               onClick={() => scrollToSection("pilot")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-background hover:text-primary transition-colors"
             >
               Pilotaż
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="text-background hover:text-primary transition-colors"
             >
               Kontakt
             </button>
@@ -66,7 +66,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-background"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,25 +79,25 @@ const Navbar = () => {
             <div className="flex flex-col gap-4">
               <button
                 onClick={() => scrollToSection("overview")}
-                className="text-foreground hover:text-primary transition-colors text-left"
+                className="text-background hover:text-primary transition-colors text-left"
               >
                 O TableHub
               </button>
               <button
                 onClick={() => scrollToSection("how-it-works")}
-                className="text-foreground hover:text-primary transition-colors text-left"
+                className="text-background hover:text-primary transition-colors text-left"
               >
                 Jak to działa
               </button>
               <button
                 onClick={() => scrollToSection("pilot")}
-                className="text-foreground hover:text-primary transition-colors text-left"
+                className="text-background hover:text-primary transition-colors text-left"
               >
                 Pilotaż
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-foreground hover:text-primary transition-colors text-left"
+                className="text-background hover:text-primary transition-colors text-left"
               >
                 Kontakt
               </button>
