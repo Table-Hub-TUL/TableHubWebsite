@@ -10,25 +10,25 @@ import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 
 const slides = [
   {
-    id: 1,
+    id: 4,
     image: gameMain,
     title: "Zdobywaj punkty",
     description: "Oznaczaj stoliki jako wolne lub zajęte i zbieraj punkty za każde zgłoszenie"
   },
   {
-    id: 2,
+    id: 3,
     image: gameRewards,
     title: "Wymieniaj nagrody",
     description: "Punkty możesz wymieniać na zniżki, vouchery lub specjalne oferty w restauracjach"
   },
   {
-    id: 3,
+    id: 2,
     image: gameRanking,
     title: "Buduj ranking",
     description: "Rywalizuj z innymi użytkownikami i wspinaj się na szczyty rankingów"
   },
   {
-    id: 4,
+    id: 1,
     image: gameAchievements,
     title: "Odblokowuj osiągnięcia",
     description: "Zdobywaj specjalne odznaki i statusy za aktywność w aplikacji"
