@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import cmsList from "@/assets/cmsmainview.png";
 import cmsRestaurant from "@/assets/cmslayout.png";
 import cmsAd from "@/assets/cmsad.png";
+import { motion, AnimatePresence } from "framer-motion"; // <-- 1. Import
 
 const slides = [
   {
@@ -36,7 +37,7 @@ const LaptopCarousel = () => {
     
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
@@ -87,11 +88,19 @@ const LaptopCarousel = () => {
             <div className="relative bg-black rounded-lg overflow-hidden shadow-inner" style={{ aspectRatio: '16/10' }}>
               {/* Screen content */}
               <div className="absolute inset-0 bg-gradient-to-br from-background to-muted">
-                <img
-                  src={slides[activeSlide].image}
-                  alt={slides[activeSlide].title}
-                  className="w-full h-full object-contain"
-                />
+                {/* 2. ADDED IMAGE TRANSITION */}
+                <AnimatePresence>
+                  <motion.img
+                    key={activeSlide}
+                    src={slides[activeSlide].image}
+                    alt={slides[activeSlide].title}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                  />
+                </AnimatePresence>
               </div>
             </div>
           </div>
@@ -107,13 +116,24 @@ const LaptopCarousel = () => {
       </div>
 
       {/* Slide info - below laptop */}
-      <div className="max-w-2xl mx-auto mt-12 text-center px-4">
-        <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">
-          {slides[activeSlide].title}
-        </h3>
-        <p className="text-lg text-muted-foreground">
-          {slides[activeSlide].description}
-        </p>
+      <div className="max-w-2xl mx-auto mt-12 text-center px-4 min-h-[120px]">
+        {/* 3. ADDED TEXT TRANSITION */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeSlide}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 gradient-text">
+              {slides[activeSlide].title}
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              {slides[activeSlide].description}
+            </p>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       {/* Dot indicators */}
@@ -122,7 +142,7 @@ const LaptopCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-3 h-3 rounded-full transition-all duration-500 ${
               index === activeSlide
                 ? "bg-primary w-8"
                 : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
@@ -143,7 +163,7 @@ const LaptopCarousel = () => {
             <Card
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`absolute top-1/2 -translate-y-1/2 w-48 cursor-pointer transition-all duration-300 hover:scale-105 ${
+              className={`absolute top-1/2 -translate-y-1/2 w-48 cursor-pointer transition-all duration-500 hover:scale-105 ${ // <-- CARD SPEED
                 position === "left" ? "-left-16" : "-right-16"
               } opacity-60 hover:opacity-100`}
             >
