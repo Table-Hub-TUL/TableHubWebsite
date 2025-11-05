@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-foreground/95 backdrop-blur-lg shadow-lg" : "bg-foreground"
+        "bg-foreground"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -36,20 +36,26 @@ const Navbar = () => {
             <span className="text-xl font-bold text-background">TableHub</span>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center gap-8">
             <button
-              onClick={() => scrollToSection("overview")}
+              onClick={() => scrollToSection("how-it-works")}
               className="text-background hover:text-primary transition-colors"
             >
               O TableHub
             </button>
             <button
-              onClick={() => scrollToSection("how-it-works")}
+              onClick={() => scrollToSection("cms")}
               className="text-background hover:text-primary transition-colors"
             >
-              Jak to działa
+              Widok restauratora
             </button>
+            <button
+              onClick={() => scrollToSection("gamification")}
+              className="text-background hover:text-primary transition-colors"
+            >
+              Gamifikacja
+            </button>            
             <button
               onClick={() => scrollToSection("pilot")}
               className="text-background hover:text-primary transition-colors"
@@ -62,7 +68,7 @@ const Navbar = () => {
             >
               Kontakt
             </button>
-          </div>
+            </div>
 
           {/* Mobile Menu Button */}
           <button
