@@ -147,7 +147,7 @@ const GamePhoneCarousel = () => {
             <Card
               key={slide.id}
               onClick={() => goToSlide(index)}
-              className={`absolute top-1/2 -translate-y-1/2 w-32 cursor-pointer transition-all duration-300 hover:scale-105 ${
+              className={`absolute top-1/2 -translate-y-1/2 w-64 cursor-pointer transition-all duration-300 hover:scale-105 ${
                 position === "left" ? `-left-${offset * 12}` : `-right-${offset * 12}`
               } opacity-60 hover:opacity-100`}
             >
