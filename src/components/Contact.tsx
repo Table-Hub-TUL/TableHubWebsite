@@ -26,7 +26,7 @@ const Contact = () => {
                   href="mailto:kontakt@tablehub.pl"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  kontakt@tablehub.pl
+                  tablehub.contact@gmail.com
                 </a>
               </div>
             </Card>
@@ -41,7 +41,7 @@ const Contact = () => {
                   href="tel:+48123456789"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
-                  +48 123 456 789
+                  +48 722 170 541
                 </a>
               </div>
             </Card>
@@ -53,7 +53,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Siedziba</h3>
                 <p className="text-muted-foreground">
-                  Warszawa, Polska
+                  Wólczańska 221, Łódź, Polska
                 </p>
               </div>
             </Card>
