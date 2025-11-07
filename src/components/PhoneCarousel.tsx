@@ -6,6 +6,8 @@ import appMap from "@/assets/app-map.jpg";
 import appFilter from "@/assets/app-filter.jpg";
 import appList from "@/assets/app-list.jpg";
 import appPopup from "@/assets/app-popup.jpg";
+import appLayout from "@/assets/app-layout.jpg";
+import appLayoutstatus from "@/assets/app-layout-status.jpg";
 
 const slides = [
   {
@@ -31,6 +33,18 @@ const slides = [
     image: appPopup,
     title: "Szczegóły restauracji",
     description: "Kliknij pin na mapie, aby zobaczyć szczegóły: adres, oceny, dostępne stoliki i możliwość zgłoszenia zmian, a w przyszłości nawet menu czy zdjęcia lokalu."
+  },
+  {
+    id: 5,
+    image: appLayout,
+    title: "Widok restauracji",
+    description: "Zobacz plan restauracji z oznaczonymi stolikami. Sprawdź dostępność w czasie rzeczywistym i znajdź najlepsze miejsce dla siebie i swoich znajomych."
+  },
+  {
+    id: 6,
+    image: appLayoutstatus,
+    title: "Zgłaszanie statusu stolików",
+    description: "Zgłaszaj zmiany w czasie rzeczywistym: oznaczaj stoliki jako wolne lub zajęte na planie restauracji, aby pomóc innym użytkownikom znaleźć dostępne miejsca."
   }
 ];
 
@@ -69,7 +83,7 @@ const PhoneCarousel = () => {
         <div className="grid lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
           {/* Left Side Cards */}
           <div className="hidden lg:flex flex-col gap-6">
-            {slides.slice(0, 2).map((slide, index) => (
+            {slides.slice(0, 3).map((slide, index) => (
               <Card
                 key={slide.id}
                 className={`p-6 cursor-pointer transition-all duration-300 hover:shadow-xl border-2 ${
@@ -157,15 +171,15 @@ const PhoneCarousel = () => {
 
           {/* Right Side Cards */}
           <div className="hidden lg:flex flex-col gap-6">
-            {slides.slice(2, 4).map((slide, index) => (
+            {slides.slice(3, 6).map((slide, index) => (
               <Card
                 key={slide.id}
                 className={`p-6 cursor-pointer transition-all duration-300 hover:shadow-xl border-2 ${
-                  activeSlide === index + 2
+                  activeSlide === index + 3
                     ? "border-primary shadow-[0_0_30px_rgba(239,106,26,0.3)] scale-105"
                     : "border-border hover:border-primary/50"
                 }`}
-                onClick={() => goToSlide(index + 2)}
+                onClick={() => goToSlide(index + 3)}
               >
                 <div className="flex items-start gap-4">
                   <div className="w-20 h-36 rounded-lg overflow-hidden flex-shrink-0">
