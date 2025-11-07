@@ -23,7 +23,7 @@ const Contact = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
                 <a
-                  href="mailto:kontakt@tablehub.pl"
+                  href="mailto:tablehub.contact@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   tablehub.contact@gmail.com
