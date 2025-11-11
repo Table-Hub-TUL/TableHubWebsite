@@ -15,7 +15,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-10">
             <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-border hover:border-primary/50">
               <div className="flex flex-col items-center text-center">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
@@ -27,21 +27,6 @@ const Contact = () => {
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   tablehub.contact@gmail.com
-                </a>
-              </div>
-            </Card>
-
-            <Card className="p-6 hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-border hover:border-primary/50">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
-                  <Phone className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Telefon</h3>
-                <a
-                  href="tel:+48123456789"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  +48 722 170 541
                 </a>
               </div>
             </Card>
